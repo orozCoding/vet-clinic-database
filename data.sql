@@ -101,3 +101,5 @@ WHERE (name = 'Angemon')
 OR (name = 'Boarmon');
 
 SELECT * FROM animals;
+        
+COMMIT;
