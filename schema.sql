@@ -81,3 +81,6 @@ ALTER TABLE visits DROP CONSTRAINT visits_pkey;
 
 -- CREATE INDEX for animals_id on visits table
 CREATE INDEX animals_id_asc ON visits(animals_id ASC);
+
+-- CREATE INDEX for vet_id on visits table
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
