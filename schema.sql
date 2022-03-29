@@ -75,3 +75,5 @@ CREATE TABLE visits (
 -- Add an email column to your owners table
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
+-- DROP visits_pkey;
+ALTER TABLE visits DROP CONSTRAINT visits_pkey;
