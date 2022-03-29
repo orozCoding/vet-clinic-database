@@ -164,5 +164,6 @@ INSERT INTO visits (animals_id, vet_id, date_visited) SELECT * FROM (SELECT id F
 INSERT INTO visits (animals_id, vet_id, date_visited) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1880-01-01'::timestamp, '1980-01-01', '4 hours') visit_timestamp;
 INSERT INTO visits (animals_id, vet_id, date_visited) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
 
-        
-        
+-- This will add 20.000.000 owners with full_name = 'Owner <X>' and email = 'owner_<X>@email.com' (~2min approx.)
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
+insert into owners (full_name, email) select 'Owner ' || generate_series(2500001, 20000000), 'owner_' || generate_series(2500001, 20000000) || '@mail.com';
