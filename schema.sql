@@ -77,3 +77,7 @@ ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 -- DROP visits_pkey;
 ALTER TABLE visits DROP CONSTRAINT visits_pkey;
+
+
+-- CREATE INDEX for animals_id on visits table
+CREATE INDEX animals_id_asc ON visits(animals_id ASC);
